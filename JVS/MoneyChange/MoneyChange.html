@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyChange</title>
+</head>
+<!--
+    
+-->
+<body>
+    <table border="1">
+        <tr style="text-align: center ;">
+            <td><strong>Amount</strong></td>
+            <td><strong>From Currency</strong></td>
+            <td><strong>To Currency</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="amount"></td>
+            <td>
+                <select id="fromcurency">
+                    <option value="vnd">Việt Nam Đồng (VNĐ)</option>
+                    <option value="usd"> Đô la (USD)</option>
+                </select>
+            </td>
+            <td>
+                <select id="tocurrency">
+                    <option value="vnd">Việt Nam Đồng (VNĐ)</option>
+                    <option value="usd"> Đô la (USD)</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="moneyChange()">Covert</button>
+            </td>
+        </tr>
+        <tr>
+            <td style="color: blue ;" colspan="2">
+                result:
+                <a id="result";></a>
+            </td>
+        </tr>
+    </table>
+</body>
+<script src="MoneyChange.js">
+
+</script>
+</html>

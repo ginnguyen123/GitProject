@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let result = 1;
+    // for(let x = 1;x<=10; x++){
+    //     for (let y = 1; y <= 10; y++) {
+    //         result = x*y; 
+    //         document.writeln(result);
+    //     }
+    //     document.writeln("<br>");
+    // }
+//     let sout;
+//     sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+//         for (i = 1; i <= 10; i++) {
+//             sout = sout + "<tr>";
+//             for (j = 1; j <= 10; j++) {
+//                 sout = sout + "<td>" + i * j + "</td>";
+//     }
+//     sout = sout + "</tr>";
+// }
+// sout = sout + "</table>";
+// document.write(sout);
+    let result, x, y;
+    result = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+    x = y =1;
+    while (x <=10){
+        result = result + "<tr>";
+            while(y<=10){
+                result = result + "<td>" + x*y + "</td>";
+                y++;
+            }
+        result = result + "</tr>";
+        x++;
+        y=1;
+    }
+    result = result + "</table>";
+    document.writeln(result);
+</script>
+</html>

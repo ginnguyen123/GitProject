@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mul Table</Table></title>
+</head>
+<body>
+    
+</body>
+<script>
+    let a=2;
+    let b=1;
+    let kq;
+    let result = "<table border='1' width ='800'>";
+    while (b<=9) {
+        result = result + "<tr>";
+            while (a<=9){
+                kq = a*b;
+                result = result + "<td>" +`${a} x ${b} = ${kq}` + "</td>";
+                a++;
+            }
+        result = result + "</tr>";
+        b++;
+        a=2;
+    }
+    result = result + "</table>";
+    document.writeln(result);
+</script>
+</html>

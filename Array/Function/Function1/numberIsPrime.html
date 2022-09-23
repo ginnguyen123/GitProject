@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>   
+</body>
+
+<script>
+let num = Number(prompt('Nhập số cần kiểm tra:'));
+checkNum(num);
+    function checkNum(isPri){
+        let count = 0;
+        if (isPri == 0 || isPri == 1){
+            alert(`${isPri} không phải là số nguyên tố`);
+            return isPri;
+        } else{
+            for(let i = 2; i<isPri; i++){
+                if(isPri%i==0){
+                    count++;
+                    console.log(count);
+                }
+            }
+        }
+        if(count == 0){
+            alert(`${isPri} là số nguyên tố!`);
+            return isPri;
+        }else {
+            alert(`${isPri} không phải số nguyên tố!`);
+            return isPri;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    let feet = Number(prompt('Nhập số feet:'));
+    let meter = Number(prompt('Nhập số meter:'));
+    function feetToMeter(feet){
+        let meter = feet * 0.305;
+        return meter;
+    }
+    function meterToFeet(meter){
+        let feet = meter * 3.279;
+        return feet;
+    }
+    document.writeln(`${feet} feet = ${feetToMeter(feet)} meter`);
+    document.writeln("<br/>");
+    document.writeln(`${meter} meter = ${meterToFeet(meter)} feet`);
+</script>
+</html>

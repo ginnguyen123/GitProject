@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<P style="font-weight: bold;">Bài 1: Gọi hàm</P>
+   <button onclick="alertMessage()">Click me!</button>
+   <P style="font-weight: bold;">Bài 2: Tăng đối số +1!</P>
+   <button onclick="increase1()" id="abc">+1</button><br>
+   <a href="" id="agu"></a>
+   <p style="font-weight: bold;">Bài 3: Tổng 2 số a,b với a>b!</p>
+   <button onclick="minMax()">Tổng a + b: </button><br>
+   <a id="sum"></a>
+   <br>
+   <p id=""></p> -->
+
+</body>
+<script>
+    // function alertMessage(){
+    //     alert ('Xin chao');
+    // }
+    // function increase1(agu){
+    //     let a = Number(prompt('Nhập một số:'));
+    //     a+=1;
+    //     document.getElementById('agu').innerHTML = a;
+    //     return a;     
+    // }
+    // function minMax(x, y){
+    //     let a = Number(prompt('Nhập số:'));
+    //     let b = Number(prompt('Nhập số:'));
+    //     let sum;
+    //     if (a<b){
+    //         alert('Nhập số a lớn hơn b!')
+    //     }else{
+    //         sum = a+b;
+    //     }
+    //     document.getElementById('sum').innerHTML = sum;
+    //     return sum;
+    // }
+    // // function addNumbers() {
+    // //     firstNum = 4;
+    // //     secondNum = 8;
+    // //     result = firstNum + secondNum;
+    // //     //alert(result); result = 12
+    // //     return result;
+    // //     //alert(result); result = 12
+    // // }
+    // // result = 0;
+    // // //alert(result); result = 0
+    // // result = addNumbers(); 
+    // // alert(result);
+    // // //alert(result); result = 12
+    // let star = prompt('Nhập vào ngôi sao:');
+
+let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+function check_star(star) {
+    let index_star1 = 0;
+    let result = "";
+    for (let i = 0; i < star1.length; i++) {
+        if (star == star1[i]) {
+            index_star1 = i;
+            for(let j = 0; j < star2.length; j++) {
+                if (index_star1 == j) {
+                    result = star2[j];
+                    return result;
+                } else {
+                    result = "Không tìm thấy chòm sao"
+                    return result;
+                }
+            }
+        } else {
+            result = "Không tìm thấy sao";
+            return result;
+        }
+    }
+
+}
+let star = prompt("Nhập vào ngôi sao: ")
+document.write(check_star(star));
+</script>
+</html

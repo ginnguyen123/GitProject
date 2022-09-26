@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="funnyCircle" width="500" height="300" style="border: 1px solid #d3d3d3 ;"></CAnvas>
+</body>
+<Script>
+    function Cricle (x,y,radius){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+    function randomHex(){ // hàm sinh số ngẫu nhiên từ 0 - 255
+        return Math.floor(Math.random()*255);
+    }
+    function randomColor(){// hàm sinh màu ngẫu nhiên
+        let blue = randomHex();
+        let red = randomHex();
+        let green = randomHex();
+        return "rgb(" + red + "," + green + "," + blue + ")";
+        //rgb(xyz , abc , axy);
+    }
+    function createCircle (){
+        let ctx = document.getElementById("funnyCircle").getContext("2d"); // getcontext: ngữ cảnh 2d
+        //let cricle = new cricle(x,y,radius); 
+        //để sinh ra size hình tròn ngẫu nhiên > tạo ra bán kính ngẫu nhiên bằng hàm Math.random()
+        let radius = Math.floor(Math.random()*100); // Mathrandom sinh số ngẫu nhiên tứ 0 - 1
+        let color = randomColor();
+        let x = Math.random()*window.innerWidth;
+        let y = Math.random()*window.innerHeight;
+        let cricle = new Cricle(x,y,radius);
+        ctx.beginPath(); //bắt đầu nét vẽ hoặc thiết lập lại nét vẽ hiện tại.
+        ctx.arc(cricle.x, cricle.y, cricle.radius, 0, 2*Math.PI);// gọi hàm vẽ hình tròn arc(x, y, r, start, stop) dùng để vẽ cung tròn
+        ctx.fillStyle = color;
+        ctx.fill(); // set màu vẽ, mặc định màu đen
+    }
+    
+function createMultipleCircle(){
+		for(var i = 0; i < 30; i++){
+    	createCircle();
+    }
+}
+
+createMultipleCircle();
+    
+</Script>
+</html>

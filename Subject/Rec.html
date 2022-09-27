@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+</head>
+<body>
+    <canvas id="rec" width="500" height="300"></canvas>
+    
+</body>
+<script>
+    //Xây dựng đối tượng hình chữ nhật
+    function rectangle(width, height){
+        this.width = width;
+        this.height = height;
+        this.getWidth = function(){
+            return width;
+        }
+        this.setWidth = function(width){
+            this.Width = width;
+        }
+        this.setHeight = function(height){
+            this.height = height;
+        }
+        this.getHeight = function(){
+            return height;
+        }
+        this.getArea = function(){
+            return this.height*this.width;
+        }
+        this.getPerimeter = function(){
+            return (this.getHeight + this.width)*2;
+        }
+    }
+    let rec = new rectangle(150,50); // khai báo biến rec ở đối tượng hcn
+    let width = rec.getWidth(); // khai báo biến width chính là chiều dài 150 ở biến rec
+    let height = rec.getHeight();
+    let canvas = document.getElementById("rec");
+    let ctx =  canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.fillStyle = '#fa4b2a';
+    ctx.fillRect(10, 10, width, height);//ctx.fillRect(x, y, width, height) - với x, y là tọa góc trên bên trái hcn
+</script>
+</html>
